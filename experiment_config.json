@@ -1,0 +1,66 @@
+{
+  "dataset": "PolyAI/banking77",
+  "language": "en",
+  "labels_in_model_order": [
+    "activate_my_card",
+    "lost_or_stolen_card",
+    "card_swallowed",
+    "change_pin",
+    "transaction_charged_twice",
+    "declined_card_payment",
+    "cancel_transfer",
+    "transfer_not_received_by_recipient",
+    "wrong_amount_of_cash_received",
+    "card_arrival"
+  ],
+  "labels_kk": {
+    "activate_my_card": "Картаны белсендіру",
+    "lost_or_stolen_card": "Картаның жоғалуы немесе ұрлануы",
+    "card_swallowed": "Картаның банкоматта қалып қоюы",
+    "change_pin": "PIN-кодты өзгерту",
+    "transaction_charged_twice": "Бір сатып алу үшін екі рет ақша алынуы",
+    "declined_card_payment": "Картамен төлемнің қабылданбауы",
+    "cancel_transfer": "Ақша аударымын тоқтату",
+    "transfer_not_received_by_recipient": "Аударымның алушыға жетпеуі",
+    "wrong_amount_of_cash_received": "Банкоматтың қате сома беруі",
+    "card_arrival": "Картаның жеткізілуін күту"
+  },
+  "validation_fraction": 0.2,
+  "seed": 42,
+  "model": "distilbert-base-uncased",
+  "max_length": 128,
+  "epochs": 3,
+  "learning_rate": 2e-05,
+  "optimizer": "adamw_torch",
+  "weight_decay": 0.01,
+  "warmup_ratio": 0.1,
+  "train_batch_size": {
+    "cpu": 8,
+    "cuda": 16
+  },
+  "eval_batch_size": {
+    "cpu": 8,
+    "cuda": 32
+  },
+  "best_metric": "validation_macro_f1",
+  "baseline": {
+    "ngram_ranges": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "sublinear_tf": true,
+    "max_iter": 1000
+  },
+  "operator_threshold_selection": {
+    "min_validation_accuracy": 0.98,
+    "min_accepted": 30,
+    "objective": "maximum_coverage",
+    "fallback_threshold": 1.01
+  }
+}

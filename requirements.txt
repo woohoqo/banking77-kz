@@ -1,0 +1,14 @@
+torch>=2.6,<3
+transformers==4.57.1
+tokenizers==0.22.1
+datasets==4.4.1
+accelerate==1.11.0
+huggingface-hub==0.36.0
+gradio==5.49.1
+scikit-learn==1.6.1
+matplotlib==3.10.0
+seaborn==0.13.2
+pandas>=2.2,<3
+numpy
+scipy
+ipython

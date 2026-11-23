@@ -1,0 +1,82 @@
+{
+  "session": {
+    "device": "cpu",
+    "pytorch": "2.14.1+cpu",
+    "steps": 426,
+    "trainer_time": "00:20:33",
+    "train_size": 1130,
+    "validation_size": 283,
+    "known_test_size": 400,
+    "unknown_test_size": 2680
+  },
+  "validation_threshold": {
+    "threshold_rounded": 0.42698,
+    "accepted": 282,
+    "correct": 277
+  },
+  "epochs": [
+    {
+      "epoch": 1,
+      "training_loss": 1.0367,
+      "validation_loss": 0.86919,
+      "accuracy": 0.911661,
+      "precision_macro": 0.930118,
+      "recall_macro": 0.864144,
+      "f1_macro": 0.875377
+    },
+    {
+      "epoch": 2,
+      "training_loss": 0.3295,
+      "validation_loss": 0.25067,
+      "accuracy": 0.975265,
+      "precision_macro": 0.97891,
+      "recall_macro": 0.960316,
+      "f1_macro": 0.967535
+    },
+    {
+      "epoch": 3,
+      "training_loss": 0.1501,
+      "validation_loss": 0.167348,
+      "accuracy": 0.978799,
+      "precision_macro": 0.981945,
+      "recall_macro": 0.969875,
+      "f1_macro": 0.975199
+    }
+  ],
+  "known_test": {
+    "baseline": {
+      "correct": 374,
+      "accuracy": 0.935,
+      "precision_macro": 0.9388,
+      "recall_macro": 0.935,
+      "f1_macro": 0.9342
+    },
+    "distilbert": {
+      "correct": 385,
+      "accuracy": 0.9625,
+      "precision_macro": 0.963793,
+      "recall_macro": 0.9625,
+      "f1_macro": 0.962007
+    }
+  },
+  "routing_test": {
+    "known": {
+      "total": 400,
+      "to_operator": 7,
+      "auto_accepted": 393,
+      "auto_correct": 382
+    },
+    "unknown": {
+      "total": 2680,
+      "to_operator": 763,
+      "auto_accepted": 1917,
+      "auto_correct": 0
+    },
+    "combined": {
+      "total": 3080,
+      "to_operator": 770,
+      "auto_accepted": 2310,
+      "auto_correct": 382
+    }
+  }
+}
